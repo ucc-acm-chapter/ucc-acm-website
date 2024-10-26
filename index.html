@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UCC's ACM Student Chapter Main Page</title>
+    <link rel="favicon" href="icons/favicon.ico">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <script defer src="script.js"></script> <!-- Link to JS file -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Navigation Bar -->
+            <nav class="nav-container">
+                <h1 class="logo">UCC's ACM Student Chapter</h1>
+                <ul class="nav-bar" id="nav-bar">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger Menu -->
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <section id="home" class="main">
+            <div class="main-content">
+                <h2>Welcome to UCC's ACM Student Chapter</h2>
+                <p>
+                    We are an organization within UCC that promotes IT events such as hackathons, cybersecurity events,
+                    and more. Our goal is to expand our team and reach as many students as possible.
+                </p>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About Us</h2>
+            <p>Learn more about our mission, vision, and goals as an ACM Student Chapter.</p>
+        </section>
+
+        <section id="events" class="content-section">
+            <h2>Upcoming Events</h2>
+            <p>Stay tuned for hackathons, coding competitions, and networking events.</p>
+        </section>
+
+        <section id="team" class="content-section">
+            <h2>Our Team</h2>
+            <p>Meet the talented individuals leading the ACM Student Chapter at UCC.</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact Us</h2>
+            <p>Get in touch for more information on our events or how to join.</p>
+            
+            <form class="contact-form" action="submit_form.php" method="post">  Adjust the action to your server-side script
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Logo or Name -->
+                <div class="footer-logo">
+                    <h2>UCC ACM Chapter</h2>
+                    <img src="/images/logo.png" alt="ACM Logo">
+                </div>
+        
+                <!-- Navigation Links -->
+                <div class="footer-links">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Contact Information -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:acmchapter@ucc.com">acmchapter@ucc.com</a></p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+        
+                <!-- Location Information -->
+                <div class="footer-location">
+                    <h3>Find Us</h3>
+                    <p>UCC Campus, Western Gateway Building, Room 202</p>
+                    <p><a href="https://maps.app.goo.gl/4LFaeuGKVdfvfGuw5" target="_blank">University College Cork, Western Rd, Mardyke, Cork, ZIP</a></p>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2024 UCC ACM Student Chapter. All rights reserved.</p>
+                <a href="#" class="privacy-policy">Privacy Policy</a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/uccacmchapter/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/uccacm/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="#home" class="back-to-top">↑</a>
+            </div>
+        </footer>
+        
+    </div>
+</body>
+</html>
