@@ -28,3 +28,30 @@ window.addEventListener("scroll", () => {
     }
 });
 
+function scrollTeamContainer(distance) {
+    const teamContainer = document.querySelector(".team-container");
+    teamContainer.scrollBy({
+        left: distance,
+        behavior: "smooth"
+    });
+}
+
+function expandTeamMember(selectedMember) {
+    const allMembers = document.querySelectorAll(".team-member");
+
+    if (selectedMember.classList.contains("expanded")) {
+        // If already expanded, collapse all to initial view
+        allMembers.forEach(member => member.classList.remove("expanded", "dimmed"));
+    } else {
+        // Collapse others and expand the clicked member
+        allMembers.forEach(member => {
+            if (member === selectedMember) {
+                member.classList.add("expanded");
+                member.classList.remove("dimmed");
+            } else {
+                member.classList.add("dimmed");
+                member.classList.remove("expanded");
+            }
+        });
+    }
+}
