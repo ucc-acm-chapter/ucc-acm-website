@@ -51,8 +51,50 @@
 
         <section id="team" class="content-section">
             <h2>Our Team</h2>
-            <p>Meet the talented individuals leading the ACM Student Chapter at UCC.</p>
+            <div class="team-scroll">
+                <button class="scroll-button left" onclick="scrollTeamContainer(-300)">&#10094;</button>
+                <div class="team-container">
+                    <div class="team-member" onclick="expandTeamMember(this)">
+                        <img src="images/member1.jpg" alt="Nicola Rossberg">
+                        <h3>Nicola Rossberg</h3>
+                        <p class="role">Chair</p>
+                        <p class="description">Nicola is a master's student, UCC ACM Student Chapter Chair!</p>
+                        <a href="https://www.linkedin.com/in/nicola-rossberg/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="team-member" onclick="expandTeamMember(this)">
+                        <img src="images/member2.jpg" alt="Andrew Nash">
+                        <h3>Andrew Nash</h3>
+                        <p class="role">IT/Sys Admin</p>
+                        <p class="description">Andrew oversees all technical matters.</p>
+                        <a href="https://www.linkedin.com/in/a-nash/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="team-member" onclick="expandTeamMember(this)">
+                        <img src="images/Jordan.jpg" alt="Jordan">
+                        <h3>Jordan Buckley</h3>
+                        <p class="role">Webmaster</p>
+                        <p class="description">I am the creator of the website.</p>
+                        <a href="https://www.linkedin.com/in/jordan05/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="team-member" onclick="expandTeamMember(this)">
+                        <img src="images/member4.jpg" alt="IDK">
+                        <h3>Idk</h3>
+                        <p class="role"></p>
+                        <p class="description"></p>
+                        <a href="https://www.linkedin.com/in/a-nash/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="team-member" onclick="expandTeamMember(this)">
+                        <img src="images/David.jpeg" alt="David Lesiak">
+                        <h3>David Lesiak</h3>
+                        <p class="role">OCM</p>
+                        <p class="description">David is an ordinary comittee member.</p>
+                        <a href="https://www.linkedin.com/in/david-lesiak-573830271/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <!-- Add other team members in the same way -->
+                </div>
+                <button class="scroll-button right" onclick="scrollTeamContainer(300)">&#10095;</button>
+            </div>
         </section>
+           
 
         <section id="contact" class="content-section">
             <h2>Contact Us</h2>
@@ -77,7 +119,6 @@
 
         <footer class="footer">
             <div class="footer-container">
-                <!-- Logo or Name -->
                 <div class="footer-logo">
                     <h2>UCC ACM Chapter</h2>
                     <img src="/images/logo.png" alt="ACM Logo">
@@ -106,7 +147,7 @@
                 <div class="footer-location">
                     <h3>Find Us</h3>
                     <p>UCC Campus, Western Gateway Building, Room 202</p>
-                    <p><a href="https://maps.app.goo.gl/4LFaeuGKVdfvfGuw5" target="_blank">University College Cork, Western Rd, Mardyke, Cork, ZIP</a></p>
+                    <p><a href="https://maps.app.goo.gl/4LFaeuGKVdfvfGuw5" target="_blank">University College Cork, Western Rd, Mardyke, Cork, T12 N1FK</a></p>
             </div>
         
             <div class="footer-bottom">
