@@ -188,6 +188,123 @@ a:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Team Section */
+#team {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Team Container */
+.team-scroll {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.team-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+/* Team Member Styling */
+.team-member {
+    flex: 0 0 200px; /* Default width */
+    max-height: 300px; /* Default height for all members initially */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+/* Expanded Member Style */
+.team-member.expanded {
+    max-height: 400px; /* Expanded height */
+    flex: 0 0 250px; /* Slightly wider */
+    background-color: #4edeef;
+    color: #fff;
+    z-index: 1;
+    transform: scale(1.1); /* Enlarges selected member */
+    overflow: visible;
+}
+
+/* Dimmed Members */
+.team-member.dimmed {
+    max-height: 250px; /* Slightly reduced height */
+    opacity: 0.6;
+    filter: grayscale(40%);
+    transform: scale(0.9); /* Slightly shrinks unselected members */
+}
+
+/* Ensure all content is shown in non-expanded members */
+.team-member .content {
+    display: block;
+    font-size: 0.85em;
+    opacity: 1;
+}
+
+/* Full content display in expanded member */
+.team-member.expanded .content {
+    font-size: 1em;
+    opacity: 1;
+}
+
+/* Optional: Adjust image size for expanded */
+.team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: width 0.3s, height 0.3s;
+}
+
+.team-member.expanded img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Scroll Buttons */
+.scroll-button {
+    background-color: #333;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-button.left {
+    left: -20px;
+}
+
+.scroll-button.right {
+    right: -20px;
+}
+
+.scroll-button:hover {
+    background-color: #4edeef;
+}
+
+
+
 .contact-form {
     max-width: 600px; 
     margin: 20px auto; 
@@ -330,8 +447,6 @@ button:hover {
 .privacy-policy:hover {
     color: #4edeef;
 }
-
-
 
 /* Responsive Footer */
 @media (max-width: 768px) {
