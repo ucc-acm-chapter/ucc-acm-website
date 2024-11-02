@@ -344,7 +344,7 @@ h2 {
 
 .arrow i {
     font-size: 3em;
-    font-weight: bold; /* Makes the arrow look thicker, if applicable */
+    font-weight: bold;
     color: #333;
 }
 
