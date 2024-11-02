@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.querySelector(".contact-form");
     
     contactForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevents form from actually submitting
+        event.preventDefault(); // Prevents form from actually submitting change in future
         
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
