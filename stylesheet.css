@@ -264,7 +264,6 @@ h2 {
     opacity: 1;
 }
 
-/* Optional: Adjust image size for expanded */
 .team-member img {
     width: 80px;
     height: 80px;
@@ -305,53 +304,172 @@ h2 {
 
 
 
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    background-color: #4ed8e8;
+    padding: 40px;
+    border-radius: 8px;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+.contact-title {
+    display: flex;
+    flex-direction: column; /* Stacks the arrow and text vertically */
+    align-items: flex-start;
+    gap: 10px; /* Adds space between the arrow and the text */
+}
+
+.arrow i {
+    font-size: 3em;
+    font-weight: bold; /* Makes the arrow look thicker, if applicable */
+    color: #333;
+}
+
+.contact-description {
+    margin-top: auto; /* Ensures the text is at the bottom */
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+}
+
+.contact-title h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+
+.contact-info p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #333;
+}
+
 .contact-form {
-    max-width: 600px; 
-    margin: 20px auto; 
-    padding: 20px; 
-    background-color: #fff; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .form-group label {
-    display: block; 
-    margin-bottom: 5px; 
     font-weight: bold;
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%; 
-    padding: 10px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    font-size: 1em; 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #4edeef; 
-    outline: none; 
+    border-color: #4edeef;
+    outline: none;
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #4edeef; 
-    color: white; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer; 
-    font-size: 1em; 
+button[type="submit"] {
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #36b2d8; 
+button[type="submit"]:hover {
+    background-color: #555;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding: 20px;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+}
+
+.feedback-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.feedback-message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback-message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #333;
+    z-index: 9999;
+    display: none;
+}
+
+
+
 
 /* Footer */
 .footer {
