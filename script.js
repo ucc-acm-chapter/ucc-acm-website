@@ -55,3 +55,51 @@ function expandTeamMember(selectedMember) {
         });
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.querySelector(".contact-form");
+    
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents form from actually submitting
+        
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        
+        if (validateForm(name, email, message)) {
+            // Mock form submission
+            showFeedback("Thank you! Your message has been sent.", "success");
+            contactForm.reset(); // Clears the form
+        } else {
+            showFeedback("Please fill out all required fields.", "error");
+        }
+    });
+
+    function validateForm(name, email, message) {
+        // Basic check to ensure only name, email, and message fields are filled
+        if (!name || !email || !message) {
+            return false;
+        }
+        return true;
+    }
+
+    function showFeedback(message, type) {
+        // Create feedback element if it doesn't exist
+        let feedback = document.querySelector(".feedback-message");
+        if (!feedback) {
+            feedback = document.createElement("div");
+            feedback.classList.add("feedback-message");
+            document.querySelector(".contact-container").appendChild(feedback);
+        }
+
+        feedback.textContent = message;
+        feedback.classList.remove("success", "error"); // Remove existing classes
+        feedback.classList.add(type); // Add success or error class
+
+        // Auto-hide the message after 3 seconds
+        setTimeout(() => {
+            feedback.textContent = "";
+            feedback.classList.remove("success", "error");
+        }, 3000);
+    }
+});
