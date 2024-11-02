@@ -76,11 +76,11 @@
                         <a href="https://www.linkedin.com/in/jordan05/"><i class="fab fa-linkedin"></i></a>
                     </div>
                     <div class="team-member" onclick="expandTeamMember(this)">
-                        <img src="images/member4.jpg" alt="IDK">
-                        <h3>Idk</h3>
-                        <p class="role"></p>
-                        <p class="description"></p>
-                        <a href="https://www.linkedin.com/in/a-nash/"><i class="fab fa-linkedin"></i></a>
+                        <img src="images/Aaron.jpg" alt="Aaron Moore">
+                        <h3>Aaron Moore</h3>
+                        <p class="role">Morale Support Officer</p>
+                        <p class="description">Mf mad geeked</p>
+                        <a href="https://www.linkedin.com/in/aaron-moore-5b106031b/"><i class="fab fa-linkedin"></i></a>
                     </div>
                     <div class="team-member" onclick="expandTeamMember(this)">
                         <img src="images/David.jpeg" alt="David Lesiak">
@@ -95,27 +95,43 @@
             </div>
         </section>
            
-
-        <section id="contact" class="content-section">
-            <h2>Contact Us</h2>
-            <p>Get in touch for more information on our events or how to join.</p>
-            
-            <form class="contact-form" action="submit_form.php" method="post">  Adjust the action to your server-side script
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <!-- Contact Title and Message -->
+                <div class="contact-info">
+                    <!-- Arrow and Title at the Top -->
+                    <div class="contact-title">
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                        <h2>Contact</h2>
+                    </div>
+                    <p class="contact-description">
+                        Directly contact us about your queries in regards to sponsorships or general questions regarding our events!
+                    </p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+                
+                
+                <!-- Contact Form -->
+                <form class="contact-form" action="submit_form.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Your company</label>
+                        <input type="text" id="company" name="company" placeholder="Enter your company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your message*</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Send Enquiry &#8594;</button>
+                </form>
+            </div>
+        </section>        
 
         <footer class="footer">
             <div class="footer-container">
