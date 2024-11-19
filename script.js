@@ -1,14 +1,30 @@
-// Toggle Hamburger Menu
 
-// document.getElementById("hamburger").addEventListener("click", function () {
-//     const navBar = document.getElementById("nav-bar");
-//     navBar.classList.toggle("active");
-// });
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navBar = document.getElementById("nav-bar");
 
-document.getElementById("hamburger").addEventListener("click", function () {
-    this.classList.toggle("active");
-    document.getElementById("nav-bar").classList.toggle("active");
+    hamburger.addEventListener("click", function () {
+        this.classList.toggle("active");
+        navBar.classList.toggle("active");
+    });
+
+    // Close menu when clicking outside of it
+    document.addEventListener("click", function (event) {
+        if (!navBar.contains(event.target) && !hamburger.contains(event.target)) {
+            navBar.classList.remove("active");
+            hamburger.classList.remove("active");
+        }
+    });
+
+    const navLinks = navBar.querySelectorAll("a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navBar.classList.remove("active");
+            hamburger.classList.remove("active");
+        });
+    });
 });
+
 
 const backToTopButton = document.querySelector(".back-to-top");
 window.addEventListener("scroll", () => {
@@ -26,6 +42,22 @@ window.addEventListener("scroll", () => {
     } else {
         navContainer.classList.remove("scrolled");
     }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
+document.querySelector('.register-button').addEventListener('click', (event) => {
+    window.open(event.target.href, '_blank');
 });
 
 function scrollTeamContainer(distance) {
@@ -56,11 +88,12 @@ function expandTeamMember(selectedMember) {
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.querySelector(".contact-form");
     
     contactForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevents form from actually submitting change in future
+        event.preventDefault(); // Prevents form from actually submitting
         
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -69,14 +102,13 @@ document.addEventListener("DOMContentLoaded", function() {
         if (validateForm(name, email, message)) {
             // Mock form submission
             showFeedback("Thank you! Your message has been sent.", "success");
-            contactForm.reset(); // Clears the form
+            contactForm.reset(); 
         } else {
             showFeedback("Please fill out all required fields.", "error");
         }
     });
 
     function validateForm(name, email, message) {
-        // Basic check to ensure only name, email, and message fields are filled
         if (!name || !email || !message) {
             return false;
         }
@@ -94,12 +126,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         feedback.textContent = message;
         feedback.classList.remove("success", "error"); // Remove existing classes
-        feedback.classList.add(type); // Add success or error class
+        feedback.classList.add(type);
 
-        // Auto-hide the message after 3 seconds
         setTimeout(() => {
             feedback.textContent = "";
             feedback.classList.remove("success", "error");
         }, 3000);
     }
 });
+
