@@ -26,7 +26,7 @@ a:hover {
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -45,32 +45,57 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.nav-container img {
+    width: 84px;
+}
+
+
 .nav-container .logo {
     font-size: 1.8em;
     font-weight: bold;
 }
 
+/* Navigation Links Container */
 .nav-bar {
     display: flex;
-    list-style: none;
+    gap: 20px; /* Spacing between bubbles */
+    margin: 0;
+    padding: 0;
 }
 
+/* Individual Bubble Links */
 .nav-bar li {
-    margin-left: 20px;
+    list-style: none; /* Remove bullet points */
 }
 
 .nav-bar li a {
-    color: white;
-    font-size: 1.1em;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    color: white; /* Text color */
+    font-size: 1rem; /* Modern font size */
+    font-weight: 500; /* Medium weight for clarity */
+    padding: 12px 20px; /* Inside spacing for the bubbles */
+    border-radius: 50px; /* Smooth bubble shape */
+    background: linear-gradient(135deg, #4edeef, #0077cc); /* Matches original colors */
+    text-decoration: none; /* No underlines */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions */
 }
 
+/* Hover Effect for Links */
 .nav-bar li a:hover {
-    background-color: #4edeef;
-    color: #fff;
+    background: linear-gradient(135deg, #0077cc, #005fa3); /* Slightly darker gradient */
+    color: #fff; /* Keep text white */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
+
+/* Active Link Style */
+.nav-bar li a.active {
+    background: linear-gradient(135deg, #005fa3, #4edeef); /* Reversed gradient for active link */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for active link */
+    font-weight: 600; /* Make it stand out */
+}
+
 
 .nav-container.scrolled {
     background-color: #111;
@@ -188,6 +213,62 @@ a:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+#events {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+#events h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#events h3 {
+    font-size: 2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#events p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#events img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #4edeef;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    position: relative;
+    pointer-events: auto;
+}
+
+.register-button:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+
+
 /* Team Section */
 #team {
     position: relative;
@@ -216,10 +297,9 @@ h2 {
     scroll-behavior: smooth;
 }
 
-/* Team Member Styling */
 .team-member {
-    flex: 0 0 200px; /* Default width */
-    max-height: 300px; /* Default height for all members initially */
+    flex: 0 0 200px; 
+    max-height: 300px; 
     transition: all 0.3s ease;
     cursor: pointer;
     padding: 20px;
@@ -234,21 +314,21 @@ h2 {
 
 /* Expanded Member Style */
 .team-member.expanded {
-    max-height: 400px; /* Expanded height */
-    flex: 0 0 250px; /* Slightly wider */
+    max-height: 400px;
+    flex: 0 0 250px; 
     background-color: #4edeef;
     color: #fff;
     z-index: 1;
-    transform: scale(1.1); /* Enlarges selected member */
+    transform: scale(1.1); 
     overflow: visible;
 }
 
 /* Dimmed Members */
 .team-member.dimmed {
-    max-height: 250px; /* Slightly reduced height */
+    max-height: 250px; 
     opacity: 0.6;
     filter: grayscale(40%);
-    transform: scale(0.9); /* Slightly shrinks unselected members */
+    transform: scale(0.9); 
 }
 
 /* Ensure all content is shown in non-expanded members */
@@ -258,7 +338,6 @@ h2 {
     opacity: 1;
 }
 
-/* Full content display in expanded member */
 .team-member.expanded .content {
     font-size: 1em;
     opacity: 1;
@@ -276,7 +355,6 @@ h2 {
     height: 100px;
 }
 
-/* Scroll Buttons */
 .scroll-button {
     background-color: #333;
     color: white;
@@ -299,7 +377,7 @@ h2 {
 }
 
 .scroll-button:hover {
-    background-color: #4edeef;
+    background-color: #333;
 }
 
 
@@ -329,7 +407,7 @@ h2 {
     border-radius: 8px;
     color: #333;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     justify-content: space-between;
     height: 100%;
 
@@ -337,9 +415,9 @@ h2 {
 
 .contact-title {
     display: flex;
-    flex-direction: column; /* Stacks the arrow and text vertically */
+    flex-direction: column;
     align-items: flex-start;
-    gap: 10px; /* Adds space between the arrow and the text */
+    gap: 10px; 
 }
 
 .arrow i {
@@ -349,7 +427,7 @@ h2 {
 }
 
 .contact-description {
-    margin-top: auto; /* Ensures the text is at the bottom */
+    margin-top: auto; 
     font-size: 1em;
     line-height: 1.5;
     color: #333;
@@ -469,8 +547,6 @@ button[type="submit"]:hover {
 }
 
 
-
-
 /* Footer */
 .footer {
     background-color: #333;
@@ -562,6 +638,10 @@ button[type="submit"]:hover {
     margin-left: 15px;
 }
 
+.social-icons a:hover {
+    color: #4edeef;
+}
+
 .privacy-policy:hover {
     color: #4edeef;
 }
@@ -627,6 +707,8 @@ button[type="submit"]:hover {
         vertical-align: middle;
     }
 }
+
+
 
 /* Animations */
 @keyframes fadeInDown {
