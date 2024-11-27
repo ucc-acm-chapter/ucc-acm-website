@@ -60,33 +60,58 @@ document.querySelector('.register-button').addEventListener('click', (event) => 
     window.open(event.target.href, '_blank');
 });
 
+// Smooth scrolling for the team container
 function scrollTeamContainer(distance) {
-    const teamContainer = document.querySelector(".team-container");
-    teamContainer.scrollBy({
-        left: distance,
-        behavior: "smooth"
-    });
+    const teamContainer = document.querySelector('.team-container');
+    if (teamContainer) {
+        teamContainer.scrollBy({
+            left: distance,
+            behavior: 'smooth',
+        });
+    }
 }
 
+// Expand and collapse team member
 function expandTeamMember(selectedMember) {
-    const allMembers = document.querySelectorAll(".team-member");
+    const allMembers = document.querySelectorAll('.team-member');
+    const isExpanded = selectedMember.classList.contains('expanded');
 
-    if (selectedMember.classList.contains("expanded")) {
-        // If already expanded, collapse all to initial view
-        allMembers.forEach(member => member.classList.remove("expanded", "dimmed"));
-    } else {
-        // Collapse others and expand the clicked member
+    // Reset all members
+    allMembers.forEach(member => {
+        member.classList.remove('expanded', 'dimmed');
+    });
+
+    // Expand clicked member if it wasn't already expanded
+    if (!isExpanded) {
+        selectedMember.classList.add('expanded');
         allMembers.forEach(member => {
-            if (member === selectedMember) {
-                member.classList.add("expanded");
-                member.classList.remove("dimmed");
-            } else {
-                member.classList.add("dimmed");
-                member.classList.remove("expanded");
+            if (member !== selectedMember) {
+                member.classList.add('dimmed');
             }
         });
     }
 }
+
+// Event listeners for scroll and click handling
+document.addEventListener('DOMContentLoaded', () => {
+    const leftButton = document.querySelector('.scroll-button.left');
+    const rightButton = document.querySelector('.scroll-button.right');
+    const teamMembers = document.querySelectorAll('.team-member');
+
+    // Scroll buttons
+    if (leftButton && rightButton) {
+        leftButton.addEventListener('click', () => scrollTeamContainer(-300));
+        rightButton.addEventListener('click', () => scrollTeamContainer(300));
+    }
+
+    // Click handling for team members
+    teamMembers.forEach(member => {
+        member.addEventListener('click', () => expandTeamMember(member));
+    });
+});
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
