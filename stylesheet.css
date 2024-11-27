@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth; /* Smooth scrolling between sections */
+    scroll-behavior: smooth; 
 }
 
 body {
@@ -55,45 +55,42 @@ a:hover {
     font-weight: bold;
 }
 
-/* Navigation Links Container */
 .nav-bar {
     display: flex;
-    gap: 20px; /* Spacing between bubbles */
+    gap: 20px; 
     margin: 0;
     padding: 0;
 }
 
-/* Individual Bubble Links */
+
 .nav-bar li {
-    list-style: none; /* Remove bullet points */
+    list-style: none;
 }
 
 .nav-bar li a {
     display: inline-block;
-    color: white; /* Text color */
-    font-size: 1rem; /* Modern font size */
-    font-weight: 500; /* Medium weight for clarity */
-    padding: 12px 20px; /* Inside spacing for the bubbles */
-    border-radius: 50px; /* Smooth bubble shape */
-    background: linear-gradient(135deg, #4edeef, #0077cc); /* Matches original colors */
-    text-decoration: none; /* No underlines */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: all 0.3s ease; /* Smooth transitions */
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #4edeef, #0077cc);
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
 }
 
-/* Hover Effect for Links */
 .nav-bar li a:hover {
-    background: linear-gradient(135deg, #0077cc, #005fa3); /* Slightly darker gradient */
-    color: #fff; /* Keep text white */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background: linear-gradient(135deg, #0077cc, #005fa3);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
-/* Active Link Style */
 .nav-bar li a.active {
-    background: linear-gradient(135deg, #005fa3, #4edeef); /* Reversed gradient for active link */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for active link */
-    font-weight: 600; /* Make it stand out */
+    background: linear-gradient(135deg, #005fa3, #4edeef);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    font-weight: 600; 
 }
 
 
@@ -269,116 +266,166 @@ a:hover {
 
 
 
-/* Team Section */
+/* Team Section Styling */
 #team {
-    position: relative;
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
 }
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+#team h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-/* Team Container */
+/* Team Scrollable Container */
 .team-scroll {
     display: flex;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
 }
 
 .team-container {
     display: flex;
-    overflow-x: auto;
     gap: 20px;
-    padding: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
     scroll-behavior: smooth;
-}
-
-.team-member {
-    flex: 0 0 200px; 
-    max-height: 300px; 
-    transition: all 0.3s ease;
-    cursor: pointer;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
     position: relative;
+    z-index: 1;
 }
 
-/* Expanded Member Style */
-.team-member.expanded {
-    max-height: 400px;
-    flex: 0 0 250px; 
-    background-color: #4edeef;
-    color: #fff;
+.team-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Team Member Card */
+.team-member {
+    flex: 0 0 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+    position: relative;
     z-index: 1;
-    transform: scale(1.1); 
-    overflow: visible;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.team-member .role {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.team-member .description {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Logo Styling */
+.team-member a {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #29b1c6; /* LinkedIn blue */
+    margin-top: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.team-member a i {
+    display: inline-block;
+    font-size: 1.8rem; /* Slightly larger icon size */
+    vertical-align: middle;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.team-member a:hover i {
+    transform: scale(1.2); /* Subtle hover scale effect */
+    color: #4edeef; /* Darker LinkedIn blue */
+}
+
+/* Restoring Hover Effects */
+.team-member:hover a i {
+    transform: scale(1.1);
+    color: #4ed8e8;
+}
+
+
+/* Expanded Member Styling */
+.team-member.expanded {
+    flex: 0 0 250px;
+    background-color: #ffffff; /* Keeps original background color */
+    z-index: 2; /* Ensures expanded member is above others */
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.team-member.expanded img {
+    width: 120px;
+    height: 120px;
 }
 
 /* Dimmed Members */
 .team-member.dimmed {
-    max-height: 250px; 
-    opacity: 0.6;
-    filter: grayscale(40%);
-    transform: scale(0.9); 
+    opacity: 0.5;
+    filter: grayscale(50%);
 }
 
-/* Ensure all content is shown in non-expanded members */
-.team-member .content {
-    display: block;
-    font-size: 0.85em;
-    opacity: 1;
-}
-
-.team-member.expanded .content {
-    font-size: 1em;
-    opacity: 1;
-}
-
-.team-member img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    transition: width 0.3s, height 0.3s;
-}
-
-.team-member.expanded img {
-    width: 100px;
-    height: 100px;
-}
-
+/* Scroll Buttons */
 .scroll-button {
     background-color: #333;
     color: white;
-    font-size: 2em;
-    padding: 10px;
+    font-size: 1.5rem;
     border: none;
     border-radius: 50%;
+    padding: 10px;
     cursor: pointer;
     position: absolute;
-    z-index: 2;
-    transition: background-color 0.3s ease;
+    z-index: 3;
+    transition: background-color 0.3s;
 }
 
 .scroll-button.left {
-    left: -20px;
+    left: 10px;
 }
 
 .scroll-button.right {
-    right: -20px;
+    right: 10px;
 }
 
 .scroll-button:hover {
-    background-color: #333;
+    background-color: #555;
 }
+
+
 
 
 
@@ -568,9 +615,17 @@ button[type="submit"]:hover {
     padding: 40px 0;
 }
 
-.footer-container img{
+.footer-logo img {
+    max-width: 100px;
+    height: auto;
     display: block;
-    margin: 25px auto 0 auto;
+    margin: 0 auto 10px; 
+    border-radius: 8px;
+}
+
+
+.footer-logo img:hover {
+    transform: scale(1.1);
 }
 
 .footer-logo h2 {
@@ -707,7 +762,6 @@ button[type="submit"]:hover {
         vertical-align: middle;
     }
 }
-
 
 
 /* Animations */
