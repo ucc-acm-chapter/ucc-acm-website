@@ -4,4 +4,6 @@ Attempting to add new features.
 
 Hopefully implement react framework, as I plan on the website being one page.
 
-Need to fix the favicon
+Need to fix the favicon.
+
+Need to create a git ignore
