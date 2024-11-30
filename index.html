@@ -1,205 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UCC's ACM Student Chapter Main Page</title>
-    <link rel="favicon" href="icons/favicon-16x16.png">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
-    <script defer src="script.js"></script> <!-- Link to JS file -->
-</head>
-<body>
-    <div class="container">
-        <header>
-            <!-- Navigation Bar -->
-            <nav class="nav-container">
-                <img src="images/acmLogo.png" alt="Acm Logo"/>
-                <h1 class="logo">UCC's ACM Student Chapter</h1>
-                <ul class="nav-bar" id="nav-bar">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#team">Our Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger Menu -->
-            </nav>
-        </header>
-
-        <!-- Main Content -->
-        <section id="home" class="main">
-            <div class="main-content">
-                <h2>Welcome to UCC's ACM Student Chapter</h2>
-                <p>
-                    We are an organization within UCC that promotes IT events such as hackathons, cybersecurity events,
-                    and more. Our goal is to expand our team and reach as many students as possible.
-                </p>
-            </div>
-        </section>
-
-        <section id="about" class="content-section">
-            <h2>About Us</h2>
-            <p>Learn more about our mission, vision, and goals as an ACM Student Chapter. We have hosted many hackathons
-                within ucc.</p>
-        </section>
-
-        <section id="events" class="content-section">
-            <h2>IrlCPC 2025</h2>
-            <h3>Register Now!</h3>
-            <p>Irish Collegiate Programming Competition</p>
-            <img src="images/acmPoster.jpeg" alt="Irish Collegiate Programming Competition Flyer" style="width:100%; max-width:600px; margin:20px auto; display:block;">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdurzqEXZ48FJcd9gg9OZ0M4eGLFJOml7dtElUwkQMdT46U8g/viewform?pli=1" target="_blank" class="register-button">
-                Register Here!
-            </a>
-        </section>
-        
-        <section id="team" class="content-section">
-            <h2>Meet Our Team</h2>
-            <div class="team-scroll">
-                <button class="scroll-button left" onclick="scrollTeamContainer(-300)">&#10094;</button>
-                <div class="team-container">
-                    <div class="team-member" onclick="expandTeamMember(this)">
-                        <img src="images/nicola.jpg" alt="Nicola Rossberg">
-                        <h3>Nicola Rossberg</h3>
-                        <p class="role">Chair</p>
-                        <p class="description">Nicola is a master's student and the UCC ACM Chapter Chair!</p>
-                        <a href="https://www.linkedin.com/in/nicola-rossberg/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <div class="team-member" onclick="expandTeamMember(this)">
-                        <img src="images/andrew.jpg" alt="Andrew Nash">
-                        <h3>Andrew Nash</h3>
-                        <p class="role">IT/Sys Admin</p>
-                        <p class="description">Andrew oversees all technical matters in the ACM Chapter.</p>
-                        <a href="https://www.linkedin.com/in/a-nash/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <div class="team-member" onclick="expandTeamMember(this)">
-                        <img src="images/Jordan.jpg" alt="Jordan">
-                        <h3>Jordan Buckley</h3>
-                        <p class="role">Webmaster</p>
-                        <p class="description">Jordan created/manages the website and online infrastructure.</p>
-                        <a href="https://www.linkedin.com/in/jordan05/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <div class="team-member" onclick="expandTeamMember(this)">
-                        <img src="images/Mikolaj.jpg" alt="Mikolaj Wujek">
-                        <h3>Mikolaj Wujek</h3>
-                        <p class="role">Secretary</p>
-                        <p class="description">Mikolaj keeps everything organized and on schedule.</p>
-                        <a href="https://www.linkedin.com/in/mikolaj-wujek-132354333/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <div class="team-member" onclick="expandTeamMember(this)">
-                        <img src="images/michael.jpg" alt="Michael">
-                        <h3>Michael Xuereb</h3>
-                        <p class="role">Finance Officer</p>
-                        <p class="description">Michael ensures all finances are well-managed for events.</p>
-                        <a href="https://www.linkedin.com/in/michael-xuereb1337/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                    </div>
-                    <div class="team-member" onclick="expandTeamMember(this)">
-                        <img src="images/David.jpeg" alt="David Lesiak">
-                        <h3>David Lesiak</h3>
-                        <p class="role">OCM</p>
-                        <p class="description">David contributes as a valued committee member.</p>
-                        <a href="https://www.linkedin.com/in/david-lesiak-573830271/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                                <!-- More members to be added-->
-                </div>
-                <button class="scroll-button right" onclick="scrollTeamContainer(300)">&#10095;</button>
-            </div>
-        </section>
-        
-           
-        <section id="contact" class="contact-section">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-title">
-                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                        <h2>Contact</h2>
-                    </div>
-                    <p class="contact-description">
-                        Directly contact us about your queries in regards to sponsorships or general questions regarding our events!
-                    </p>
-                </div>
-                
-                <!-- Contact Form -->
-                <form class="contact-form" action="submit_form.php" method="post">
-                    <div class="form-group">
-                        <label for="name">Name*</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address*</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Your company</label>
-                        <input type="text" id="company" name="company" placeholder="Enter your company">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your message*</label>
-                        <textarea id="message" name="message" placeholder="Enter your message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit">Send Enquiry &#8594;</button>
-                </form>
-            </div>
-        </section>        
-
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <h2>UCC ACM Chapter</h2>
-                    <img src="images/acmLogo.png" alt="ACM Logo">
-                </div>
-        
-                <!-- Navigation Links -->
-                <div class="footer-links">
-                    <h3>Pages</h3>
-                    <ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>UCC's ACM Student Chapter Main Page</title>
+        <link rel="favicon" href="icons/favicon-16x16.png" />
+        <link rel="stylesheet" href="stylesheet.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="changes.css" />
+        <script defer src="script.js"></script>
+        <!-- Link to JS file -->
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <!-- Navigation Bar -->
+                <nav class="nav-container">
+                    <img src="images/acmLogo.png" alt="Acm Logo" />
+                    <h1 class="logo">UCC's ACM Student Chapter</h1>
+                    <ul class="nav-bar" id="nav-bar">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#events">Events</a></li>
                         <li><a href="#team">Our Team</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+                    <div class="hamburger" id="hamburger">&#9776;</div>
+                    <!-- Hamburger Menu -->
+                </nav>
+            </header>
+
+            <!-- Main Content -->
+            <section id="home" class="main">
+                <div class="main-content">
+                    <h2>Welcome to UCC's ACM Student Chapter</h2>
+                    <p>
+                        We are an organization within UCC that promotes IT
+                        events such as hackathons, cybersecurity events, and
+                        more. Our goal is to expand our team and reach as many
+                        students as possible.
+                    </p>
                 </div>
-        
-                <!-- Contact Information -->
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <p>Email: <a href="mailto:ucccsacm@gmail.com">ucccsacm@gmail.com</a></p>
+            </section>
+
+            <section id="about" class="content-section">
+                <h2>About Us</h2>
+                <p>
+                    Learn more about our mission, vision, and goals as an ACM
+                    Student Chapter. We have hosted many hackathons within ucc.
+                </p>
+            </section>
+
+            <section id="events" class="content-section">
+                <h2>IrlCPC 2025</h2>
+                <h3>Register Now!</h3>
+                <p>Irish Collegiate Programming Competition</p>
+                <img
+                    src="images/acmPoster.jpeg"
+                    alt="Irish Collegiate Programming Competition Flyer"
+                    style="
+                        width: 100%;
+                        max-width: 600px;
+                        margin: 20px auto;
+                        display: block;
+                    "
+                />
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdurzqEXZ48FJcd9gg9OZ0M4eGLFJOml7dtElUwkQMdT46U8g/viewform?pli=1"
+                    target="_blank"
+                    class="register-button"
+                >
+                    Register Here!
+                </a>
+            </section>
+
+            <section id="team" class="content-section">
+                <h2>Meet Our Team</h2>
+                <div class="team-scroll">
+                    <button
+                        class="scroll-button left"
+                        onclick="scrollTeamContainer(-300)"
+                    >
+                        &#10094;
+                    </button>
+                    <div id="teamContainer" class="team-container"></div>
+                    <button
+                        class="scroll-button right"
+                        onclick="scrollTeamContainer(300)"
+                    >
+                        &#10095;
+                    </button>
                 </div>
-        
-                <!-- Location Information -->
-                <div class="footer-location">
-                    <h3>Find Us</h3>
-                    <p>UCC Campus, Western Gateway Building, Room 202</p>
-                    <p><a href="https://maps.app.goo.gl/4LFaeuGKVdfvfGuw5" target="_blank">University College Cork, Western Rd, Mardyke, Cork, T12 N1FK</a></p>
-            </div>
-        
-            <div class="footer-bottom">
-                <p>&copy; 2024 UCC ACM Student Chapter. All rights reserved.</p>
-                <a href="links/privacyPolicy.html" target="_blank" class="privacy-policy">Privacy Policy</a>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/uccacmchapter/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://x.com/uccacm" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/uccacm/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-title">
+                            <span class="arrow"
+                                ><i class="fas fa-arrow-right"></i
+                            ></span>
+                            <h2>Contact</h2>
+                        </div>
+                        <p class="contact-description">
+                            Directly contact us about your queries in regards to
+                            sponsorships or general questions regarding our
+                            events!
+                        </p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form
+                        class="contact-form"
+                        action="submit_form.php"
+                        method="post"
+                    >
+                        <div class="form-group">
+                            <label for="name">Name*</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Your company</label>
+                            <input
+                                type="text"
+                                id="company"
+                                name="company"
+                                placeholder="Enter your company"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your message*</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Enter your message"
+                                rows="4"
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit">Send Enquiry &#8594;</button>
+                    </form>
                 </div>
-                <a href="#home" class="back-to-top">↑</a>
-            </div>
-        </footer>
-        
-    </div>
-</body>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-logo">
+                        <h2>UCC ACM Chapter</h2>
+                        <img src="/images/acmLogo.png" alt="ACM Logo" />
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <div class="footer-links">
+                        <h3>Pages</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#events">Events</a></li>
+                            <li><a href="#team">Our Team</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p>
+                            Email:
+                            <a href="mailto:ucccsacm@gmail.com"
+                                >ucccsacm@gmail.com</a
+                            >
+                        </p>
+                    </div>
+
+                    <!-- Location Information -->
+                    <div class="footer-location">
+                        <h3>Find Us</h3>
+                        <p>UCC Campus, Western Gateway Building, Room 202</p>
+                        <p>
+                            <a
+                                href="https://maps.app.goo.gl/4LFaeuGKVdfvfGuw5"
+                                target="_blank"
+                                >University College Cork, Western Rd, Mardyke,
+                                Cork, T12 N1FK</a
+                            >
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2024 UCC ACM Student Chapter. All rights
+                        reserved.
+                    </p>
+                    <a
+                        href="links/privacyPolicy.html"
+                        target="_blank"
+                        class="privacy-policy"
+                        >Privacy Policy</a
+                    >
+                    <div class="social-icons">
+                        <a
+                            aria-label="link to instagram page"
+                            href="https://www.instagram.com/uccacmchapter/"
+                            target="_blank"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                            aria-label="link to twitter page"
+                            href="#"
+                            target="_blank"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a
+                            aria-label="link to linked in page"
+                            href="https://www.linkedin.com/company/uccacm/"
+                            target="_blank"
+                            ><i class="fab fa-linkedin"></i
+                        ></a>
+                    </div>
+                    <a href="#home" class="back-to-top">↑</a>
+                </div>
+            </footer>
+        </div>
+        <script src="team.js"></script>
+    </body>
 </html>
