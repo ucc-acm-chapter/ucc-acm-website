@@ -1,3 +1,5 @@
+Please note not every precise changes are here, this is strictly an overview of changes done
+
 1. made it so "back to top" button is alway on top
     added z-index : 3
 
@@ -9,4 +11,9 @@
         to 815 
     Changed the title font size to the default font size
     (Additional) Moved the title to align left by the title
+
+4.  Fixed the back to top style not applying
+        Changed arrow color to white for better readability.
+        Removed padding for a fixed width and height implementation instead.
     
+5.  Created a changes css file where the big change was putting the linked in icon at a consistent positioning for each member

@@ -366,7 +366,7 @@ a:hover {
 .team-member a i {
     display: inline-block;
     font-size: 1.8rem; /* Slightly larger icon size */
-    vertical-align: middle;
+    vertical-align: bottom;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -799,17 +799,19 @@ button[type="submit"]:hover {
     transform: rotate(-45deg) translateY(-7px);
 }
 
-.back-to-top {
+.footer-bottom .back-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
     background-color: #4edeef;
     color: #fff;
-    padding: 10px 15px;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 50%;
     opacity: 0;
     transition: opacity 0.4s ease;
-    font-size: 1.5em;
+    font-size: 1.25em;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
