@@ -1,0 +1,6 @@
+1. made it so "back to top" button is alway on top
+    added z-index : 3
+
+2. Removed padding from left and right "scroll button"
+    replaced it with a fixed width and height
+
