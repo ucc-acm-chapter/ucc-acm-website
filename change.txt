@@ -17,3 +17,5 @@ Please note not every precise changes are here, this is strictly an overview of 
         Removed padding for a fixed width and height implementation instead.
     
 5.  Created a changes css file where the big change was putting the linked in icon at a consistent positioning for each member
+
+6.  Started Creating boiler plates for the remaining people but as you can see it is currently incomplete due to me not knowing their roles and what they actually do. 
