@@ -19,3 +19,8 @@ Please note not every precise changes are here, this is strictly an overview of 
 5.  Created a changes css file where the big change was putting the linked in icon at a consistent positioning for each member
 
 6.  Started Creating boiler plates for the remaining people but as you can see it is currently incomplete due to me not knowing their roles and what they actually do. 
+
+7. **** IMPORTANT 
+    created a users.js script where we can simply just add the names of each member to the object and it will add it to the Meet Our Team list
+    This will make changes easier to do since we need to only edit the "rawHtml" variable.
+    !images must contain the first name of the person in lowercase
