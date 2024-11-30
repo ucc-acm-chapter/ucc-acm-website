@@ -20,7 +20,7 @@ const members = [
         lastName: "Visentin",
         role: null,
         description: null,
-        linkedIn: "https://www.linkedin.com/in/andrea-visentin-a4b9a585/",
+        linkedIn: null,
     },
     {
         firstName: "Jordan",
@@ -36,14 +36,13 @@ const members = [
         role: "OCM",
         description:
             "Dan assisted with the development/managing of the website and online infrastructure.",
-        linkedIn: "https://www.linkedin.com/in/dan-bokete-672a72316/",
+        linkedIn: null,
     },
     {
         firstName: "Mikolaj",
         lastName: "Wujek",
-        role: "Social Media Manager",
-        description:
-            "Mikolaj created the ACM poster, and manages our social media platforms.",
+        role: "Secretary",
+        description: "Mikolaj keeps everything organized and on schedule.",
         linkedIn: "https://www.linkedin.com/in/mikolaj-wujek-132354333/",
     },
     {
@@ -55,26 +54,11 @@ const members = [
         linkedIn: "https://www.linkedin.com/in/michael-xuereb1337/",
     },
     {
-        firstName: "Pawel",
-        lastName: "Popkiewicz",
-        role: "OCM",
-        description:
-            "Pawel assisted with the development/managing of the website and online infrastructure.",
-        linkedIn: "https://www.linkedin.com/in/dan-bokete-672a72316/",
-    },
-    {
         firstName: "Taylor",
         lastName: "Santos",
-        role: "",
-        description: "",
-        linkedIn: "https://www.linkedin.com/in/taylor-santos-094954296/",
-    },
-    {
-        firstName: "Leo",
-        lastName: "Berdin",
-        role: "OCM",
-        description: "Leo placed the ACM posters around UCC.",
-        linkedIn: "https://www.linkedin.com/in/taylor-santos-094954296/",
+        role: null,
+        description: null,
+        linkedIn: null,
     },
     {
         firstName: "Freddie",
