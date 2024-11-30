@@ -4,7 +4,7 @@ const members = [
         lastName: "Rossberg",
         role: "Chairperson",
         description:
-            "Nicola is a master's student and the UCC ACM Chapter Chair!",
+            "Nicola is a master's student and the head of the UCC ACM Chapter!",
         linkedIn: "https://www.linkedin.com/in/nicola-rossberg/",
     },
     {
