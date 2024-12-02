@@ -8,14 +8,6 @@ const members = [
         linkedIn: "https://www.linkedin.com/in/nicola-rossberg/",
     },
     {
-        firstName: "Andrew",
-        lastName: "Nash",
-        role: "IT/Sys Admin",
-        description:
-            "Andrew oversees all technical matters in the ACM Chapter.",
-        linkedIn: "https://www.linkedin.com/in/a-nash/",
-    },
-    {
         firstName: "Andrea",
         lastName: "Visentin",
         role: null,
@@ -96,6 +88,14 @@ const members = [
         description: null,
         linkedIn: null,
     },
+    {
+        firstName: "Andrew",
+        lastName: "Nash",
+        role: "IT/Sys Admin",
+        description:
+            "Andrew oversees all technical matters in the ACM Chapter.",
+        linkedIn: "https://www.linkedin.com/in/a-nash/",
+    }
 ];
 
 const teamContainer = document.getElementById("teamContainer");
