@@ -10,8 +10,9 @@ const members = [
     {
         firstName: "Andrea",
         lastName: "Visentin",
-        role: null,
-        description: null,
+        role: "Academic Sponsor",
+        description: 
+            "Andrea is an Assistant Professor.",
         linkedIn: "https://www.linkedin.com/in/andrea-visentin-a4b9a585/",
     },
     {
@@ -51,42 +52,15 @@ const members = [
         role: "OCM",
         description:
             "Pawel assisted with the development/managing of the website and online infrastructure.",
-        linkedIn: null,
+        linkedIn: "https://www.linkedin.com/in/pawe%C5%82-popkiewicz-b3b727251/",
     },
     {
-        firstName: "Taylor",
-        lastName: "Santos",
-        role: null,
-        description: null,
-        linkedIn: "https://www.linkedin.com/in/taylor-santos-094954296/",
-    },
-    {
-        firstName: "Leo",
-        lastName: "Berdin",
-        role: "OCM",
-        description: "Leo placed the ACM posters around UCC.",
-        linkedIn: null,
-    },
-    {
-        firstName: "Freddie",
-        lastName: null,
-        role: null,
-        description: null,
-        linkedIn: null,
-    },
-    {
-        firstName: "Abigail",
-        lastName: null,
-        role: null,
-        description: null,
-        linkedIn: null,
-    },
-    {
-        firstName: "Alison",
-        lastName: null,
-        role: null,
-        description: null,
-        linkedIn: null,
+        firstName: "Ivan",
+        lastName: "Fonagy",
+        role: "Deputy Technical Manager",
+        description:
+            "Ivan helps with deployment and documentation of competition software.",
+        linkedIn: "https://www.linkedin.com/in/ivan-fonagy/",
     },
     {
         firstName: "Andrew",
