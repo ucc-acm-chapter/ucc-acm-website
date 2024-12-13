@@ -4,8 +4,32 @@ const members = [
         lastName: "Rossberg",
         role: "Chairperson",
         description:
-            "Nicola is a master's student and the UCC ACM Chapter Chair!",
+            "Nicola is a PhD student and the UCC ACM Chapter Chair!",
         linkedIn: "https://www.linkedin.com/in/nicola-rossberg/",
+    },
+    {
+        firstName: "David",
+        lastName: "Shanahan",
+        role: "Vice-Chairperson",
+        description:
+            "David is Master's student and the UCC ACM Chapter Vice-Chair ",
+        linkedIn: "https://www.linkedin.com/in/david-shanahan-89731a184/",
+    },
+    {
+        firstName: "Marlon",
+        lastName: "Ares",
+        role: "Secretary",
+        description:
+            "Marlon manages minutes of committee meetings and oversees Chapter administration",
+        linkedIn: "https://www.linkedin.com/in/marlon-jesus-ares-milian-4b2a16203/",
+    },
+    {
+        firstName: "Michael",
+        lastName: "Xuereb",
+        role: "Finance Officer",
+        description:
+        "Michael ensures all finances are well-managed for events.",
+        linkedIn: "https://www.linkedin.com/in/michael-xuereb1337/",
     },
     {
         firstName: "Andrea",
@@ -24,6 +48,30 @@ const members = [
         linkedIn: "https://www.linkedin.com/in/jordan05/",
     },
     {
+        firstName: "George",
+        lastName: "Osemwengie",
+        role: "OCM",
+        description:
+            "George is an OCM on the UCC ACM Student Chapter committee",
+        linkedIn: "",
+    },
+    {
+        firstName: "Ivan",
+        lastName: "Fonagy",
+        role: "Deputy Technical Manager",
+        description:
+            "Ivan helps with deployment and documentation of competition software.",
+        linkedIn: "https://www.linkedin.com/in/ivan-fonagy/",
+    },
+    {
+        firstName: "Abigail Elizabeth",
+        lastName: "Joseph",
+        role: "OCM",
+        description:
+            "Abigail is an OCM on the technical team in the UCC ACM Student Chapter committee",
+        linkedIn: "https://www.linkedin.com/in/abigail-elizabeth-joseph-a94215334/",
+    },
+    {
         firstName: "Dan",
         lastName: "Bokete",
         role: "OCM",
@@ -39,36 +87,12 @@ const members = [
         linkedIn: "https://www.linkedin.com/in/mikolaj-wujek-132354333/",
     },
     {
-        firstName: "Michael",
-        lastName: "Xuereb",
-        role: "Finance Officer",
-        description:
-            "Michael ensures all finances are well-managed for events.",
-        linkedIn: "https://www.linkedin.com/in/michael-xuereb1337/",
-    },
-    {
         firstName: "Pawel",
         lastName: "Popkiewicz",
         role: "OCM",
         description:
             "Pawel assisted with the development/managing of the website and online infrastructure.",
         linkedIn: "https://www.linkedin.com/in/pawe%C5%82-popkiewicz-b3b727251/",
-    },
-    {
-        firstName: "Ivan",
-        lastName: "Fonagy",
-        role: "Deputy Technical Manager",
-        description:
-            "Ivan helps with deployment and documentation of competition software.",
-        linkedIn: "https://www.linkedin.com/in/ivan-fonagy/",
-    },
-    {
-        firstName: "Andrew",
-        lastName: "Nash",
-        role: "IT/Sys Admin",
-        description:
-            "Andrew oversees all technical matters in the ACM Chapter.",
-        linkedIn: "https://www.linkedin.com/in/a-nash/",
     }
 ];
 
