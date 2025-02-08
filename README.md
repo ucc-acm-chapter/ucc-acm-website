@@ -11,8 +11,7 @@ Currently, I'm focused on **expanding my skillset** by exploring new frameworks 
 
 ## Contributors
 - [JordanBuckleyGit](https://github.com/JordanBuckleyGit)
-- [Danbokete]()
-- [Paweł Popkiewicz](https://github.com/PawelPopkiewicz)
+- [Danbokete](https://github.com/DanBokete)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
