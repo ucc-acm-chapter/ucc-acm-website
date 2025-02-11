@@ -74,11 +74,11 @@ main > section {
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: rgb(128, 128, 128, 0.5);
+    background-color: rgba(128, 128, 128, 0.5);
 }
 
 .modal-content {
-    position: relative;
+    /* position: relative; */
     text-align: center;
     min-width: 300px;
     width: 50%;
@@ -133,7 +133,8 @@ main > figure img {
         column-gap: 1em;
         display: flex;
         div {
-            container-type: inline-size;
+            /* problem: is this */
+            /* container-type: inline-size; */
             flex: 1 300px;
 
             figure {
