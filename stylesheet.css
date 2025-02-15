@@ -59,7 +59,8 @@ a:hover {
 
 .nav-bar {
     display: flex;
-    gap: 0.5em;
+    /* gap: 0.5em; */
+    gap: 0.725em;
     margin: 0;
     padding: 0;
 }
