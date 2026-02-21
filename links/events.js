@@ -1,126 +1,171 @@
-// 2024
-const button2024 = document.getElementById("2024");
-const modal2024 = document.getElementById("modal2024");
+const PAST_EVENTS = [
+    {
+        year: "2025",
+        label: "Last Year",
+        image: "../images/event4.JPG",
+        alt: "A picture of an ACM event!",
+        description:
+            "The 2025 hackathon brought together talented participants for an incredible day of innovation and collaboration. Teams showcased exceptional problem-solving skills and creativity, tackling challenging problems with enthusiasm. The event fostered a vibrant atmosphere of learning and teamwork, creating lasting memories and inspiring connections among all participants.",
+        paperHref: "files/IrlCPC_Problems_2025.pdf",
+    },
+    {
+        year: "2024",
+        label: "2024",
+        image: "../images/event2.jpg",
+        alt: "A picture of an ACM event from 2024!",
+        description:
+            "Last year's hackathon was a thrilling experience, with 62 teams coming together to solve challenges and push the boundaries of innovation. Teams enjoyed the collaborative spirit, diving into problem-solving and creating unique solutions. It was a day filled with learning, creativity, and unforgettable memories, making it a truly great experience for everyone involved.",
+        paperHref: "files/IrlCPC_Problems_2024.pdf",
+    },
+    {
+        year: "2023",
+        label: "2023",
+        image: "../images/event.jpg",
+        alt: "A picture of an ACM event from 2023!",
+        description:
+            "In 2023, we hosted another exciting hackathon that brought together passionate minds to solve real-world problems. Teams worked tirelessly, blending creativity and technical skills to develop innovative solutions. The event was a celebration of collaboration and determination, leaving everyone inspired and eager for more. It was a fantastic way to kick off the year!",
+        paperHref: "files/IrlCPC_Problems 2023.pdf",
+    },
+    {
+        year: "2021",
+        label: "2021",
+        image: "../images/event3.jpg",
+        alt: "A picture of an ACM event from 2021!",
+        description:
+            "The 2021 hackathon was a remarkable event, showcasing the resilience and creativity of participants despite the challenges of the year. Teams came together tackling complex problems with enthusiasm and ingenuity. The energy and dedication displayed by everyone made it a truly memorable experience, highlighting the power of innovation and collaboration.",
+        paperHref: "files/IrlCPC_Problems_2021.pdf",
+    },
+];
 
-button2024.addEventListener("click", () => {
-    modal2024.style.display = "flex";
-});
-
-modal2024.addEventListener("click", (e) => {
-    console.log(e.target.className);
-    if (e.target.className === "modal") {
-        modal2024.style.display = "none";
+function renderPastEvents() {
+    const container = document.getElementById("past-events-list");
+    if (!container) {
+        return;
     }
-});
 
-// 2025
-const button2025 = document.getElementById("2025");
-const modal2025 = document.getElementById("modal2025");
+    container.innerHTML = PAST_EVENTS.map((event) => {
+        const modalId = `modal-${event.year}`;
+        const modalContentId = `${modalId}-content`;
 
-button2025.addEventListener("click", () => {
-    modal2025.style.display = "flex";
-});
+        return `
+            <div class="past-event-card">
+                <figure class="past-event-trigger" data-modal-open="${modalId}" role="button" tabindex="0" aria-label="Open ${event.year} event details">
+                    <img src="${event.image}" alt="${event.alt}" />
+                    <figcaption>
+                        <h2>${event.label}</h2>
+                        <p>${event.description}</p>
+                        <button type="button" data-modal-open="${modalId}">View More</button>
+                    </figcaption>
+                </figure>
+                <div id="${modalId}" class="modal">
+                    <section id="${modalContentId}" class="modal-content">
+                        <h3>${event.year} Past Paper</h3>
+                        <p>The ${event.year} past papers are available to use and download here!</p>
+                        <a href="${event.paperHref}" target="_blank" rel="noopener noreferrer">Download Past Paper</a>
+                    </section>
+                </div>
+            </div>
+        `;
+    }).join("");
+}
 
-modal2025.addEventListener("click", (e) => {
-    console.log(e.target.className);
-    if (e.target.className === "modal") {
-        modal2025.style.display = "none";
+function closeAllPastEventModals() {
+    const modals = document.querySelectorAll("#past-events-list .modal");
+    modals.forEach((modal) => {
+        modal.style.display = "none";
+    });
+}
+
+function setupPastEventModalHandlers() {
+    const container = document.getElementById("past-events-list");
+    if (!container) {
+        return;
     }
-});
 
-// 2019
-const button2019 = document.getElementById("2019");
-const modal2019 = document.getElementById("modal2019");
+    container.addEventListener("click", (event) => {
+        if (event.target.closest(".modal-content")) {
+            return;
+        }
 
-button2019.addEventListener("click", () => {
-    modal2019.style.display = "flex";
-});
+        const openButton = event.target.closest("[data-modal-open]");
+        if (openButton) {
+            const modalId = openButton.getAttribute("data-modal-open");
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "flex";
+            }
+            return;
+        }
 
-modal2019.addEventListener("click", (e) => {
-    console.log(e.target.className);
-    if (e.target.className === "modal") {
-        modal2019.style.display = "none";
-    }
-});
+        if (event.target.classList.contains("modal")) {
+            event.target.style.display = "none";
+        }
+    });
 
-// 2021
-const button2021 = document.getElementById("2021");
-const modal2021 = document.getElementById("modal2021");
+    container.addEventListener("keydown", (event) => {
+        const trigger = event.target.closest("[data-modal-open]");
+        if (!trigger) {
+            return;
+        }
 
-button2021.addEventListener("click", () => {
-    modal2021.style.display = "flex";
-});
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            const modalId = trigger.getAttribute("data-modal-open");
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "flex";
+            }
+        }
+    });
 
-modal2021.addEventListener("click", (e) => {
-    console.log(e.target.className);
-    if (e.target.className === "modal") {
-        modal2021.style.display = "none";
-    }
-});
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeAllPastEventModals();
+        }
+    });
+}
 
-// Close modals when clicking outside
-document.addEventListener('click', function(event) {
-    const clickedButton = event.target.closest('button[id="2024"], button[id="2025"], button[id="2019"], button[id="2021"]');
-    const clickedModal = event.target.closest('.modal-content');
-    
-    // If click is outside any button or modal content, close all modals
-    if (!clickedButton && !clickedModal) {
-        if (modal2024) modal2024.style.display = "none";
-        if (modal2025) modal2025.style.display = "none";
-        if (modal2019) modal2019.style.display = "none";
-        if (modal2021) modal2021.style.display = "none";
-    }
-});
-
-// Fullscreen functionality
 function openFullscreen(img) {
-    // Create fullscreen modal if it doesn't exist
-    let fullscreenModal = document.querySelector('.fullscreen-modal');
-    
+    let fullscreenModal = document.querySelector(".fullscreen-modal");
+
     if (!fullscreenModal) {
-        fullscreenModal = document.createElement('div');
-        fullscreenModal.className = 'fullscreen-modal';
-        
-        const closeBtn = document.createElement('div');
-        closeBtn.className = 'fullscreen-close';
-        closeBtn.innerHTML = '&times;';
+        fullscreenModal = document.createElement("div");
+        fullscreenModal.className = "fullscreen-modal";
+
+        const closeBtn = document.createElement("div");
+        closeBtn.className = "fullscreen-close";
+        closeBtn.innerHTML = "&times;";
         closeBtn.onclick = closeFullscreen;
-        
-        const fullscreenImg = document.createElement('img');
-        fullscreenImg.src = img.src;
-        fullscreenImg.alt = img.alt;
-        
+
+        const fullscreenImg = document.createElement("img");
         fullscreenModal.appendChild(closeBtn);
         fullscreenModal.appendChild(fullscreenImg);
         document.body.appendChild(fullscreenModal);
-        
-        // Close on background click
-        fullscreenModal.addEventListener('click', function(e) {
-            if (e.target === fullscreenModal) {
+
+        fullscreenModal.addEventListener("click", (event) => {
+            if (event.target === fullscreenModal) {
                 closeFullscreen();
             }
         });
-        
-        // Close on ESC key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeFullscreen();
-            }
-        });
-    } else {
-        const fullscreenImg = fullscreenModal.querySelector('img');
-        fullscreenImg.src = img.src;
-        fullscreenImg.alt = img.alt;
     }
-    
-    fullscreenModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+
+    const fullscreenImg = fullscreenModal.querySelector("img");
+    fullscreenImg.src = img.src;
+    fullscreenImg.alt = img.alt;
+
+    fullscreenModal.classList.add("active");
+    document.body.style.overflow = "hidden";
 }
 
 function closeFullscreen() {
-    const fullscreenModal = document.querySelector('.fullscreen-modal');
+    const fullscreenModal = document.querySelector(".fullscreen-modal");
     if (fullscreenModal) {
-        fullscreenModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        fullscreenModal.classList.remove("active");
+        document.body.style.overflow = "auto";
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderPastEvents();
+    setupPastEventModalHandlers();
+});

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -35,7 +35,7 @@
                         <li><a href="#schedule">Schedule</a></li>
                         <li><a href="#team">Our Team</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="links/pastEvents.html" class="past-events-link">Past Events</a></li>
+                        <li><a href="links/pastEvents.html">Past Events</a></li>
                     </ul>
                     <div class="hamburger" id="hamburger">&#9776;</div>
                     <!-- Hamburger Menu -->
@@ -101,7 +101,9 @@
                         <div class="schedule-time">9:30 - 10:30</div>
                         <div class="schedule-details">
                             <h3>Coffee/Tea and Networking</h3>
-                            <p>Meet other participants and enjoy refreshments</p>
+                            <p>
+                                Meet other participants and enjoy refreshments
+                            </p>
                         </div>
                     </div>
                     <div class="schedule-item">
@@ -115,7 +117,9 @@
                         <div class="schedule-time">11:30 - 13:00</div>
                         <div class="schedule-details">
                             <h3>Lunch and more Networking</h3>
-                            <p>Enjoy lunch and connect with fellow competitors</p>
+                            <p>
+                                Enjoy lunch and connect with fellow competitors
+                            </p>
                         </div>
                     </div>
                     <div class="schedule-item">
@@ -129,14 +133,21 @@
                         <div class="schedule-time">17:00 - 17:20</div>
                         <div class="schedule-details">
                             <h3>Coffee/Tea/Snacks and Networking</h3>
-                            <p>Refreshments break while results are finalized</p>
+                            <p>
+                                Refreshments break while results are finalized
+                            </p>
                         </div>
                     </div>
                     <div class="schedule-item">
                         <div class="schedule-time">17:00 - 18:30</div>
                         <div class="schedule-details">
-                            <h3>Award Ceremony & Short Company Presentations</h3>
-                            <p>Winners announced, prizes awarded, and partner presentations</p>
+                            <h3>
+                                Award Ceremony & Short Company Presentations
+                            </h3>
+                            <p>
+                                Winners announced, prizes awarded, and partner
+                                presentations
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -144,28 +155,39 @@
 
             <section id="partners" class="content-section">
                 <h2>Our Partners</h2>
-                <p>We are grateful to our partners for their support in making our events possible.</p>
+                <p>
+                    We are grateful to our partners for their support in making
+                    our events possible.
+                </p>
                 <div class="partners-container">
                     <div class="partner" onclick="expandSponsor(this)">
-                        <img src="images/cadence.png" alt="Cadence">
+                        <img src="images/cadence.png" alt="Cadence" />
                     </div>
                     <div class="partner" onclick="expandSponsor(this)">
-                        <img src="images/netapp.png" alt="NetApp">
+                        <img src="images/netapp.png" alt="NetApp" />
                     </div>
                     <div class="partner" onclick="expandSponsor(this)">
-                        <img src="images/nginx.png" alt="NginX">
+                        <img src="images/nginx.png" alt="NginX" />
                     </div>
                     <div class="partner" onclick="expandSponsor(this)">
-                        <img src="images/keelvar.png" alt="Keelvar">
+                        <img src="images/keelvar.png" alt="Keelvar" />
                     </div>
                     <div class="partner" onclick="expandSponsor(this)">
-                        <img src="images/google.png" alt="Google" onerror="this.style.display='none'; this.parentElement.innerHTML='<h3 style=\'color: #4edeef; margin: 0;\'>Google</h3>';">
+                        <img
+                            src="images/google.png"
+                            alt="Google"
+                            onerror="
+                                this.style.display = 'none';
+                                this.parentElement.innerHTML =
+                                    '<h3 style=\'color: #4edeef; margin: 0;\'>Google</h3>';
+                            "
+                        />
                     </div>
                     <div class="partner" onclick="expandSponsor(this)">
-                        <img src="images/f5.png" alt="F5">
+                        <img src="images/f5.png" alt="F5" />
                     </div>
                     <div class="partner" onclick="expandSponsor(this)">
-                        <img src="images/insight.png" alt="Insight">
+                        <img src="images/insight.png" alt="Insight" />
                     </div>
                     <!-- Add more partners as needed -->
                 </div>
@@ -206,29 +228,31 @@
                         </p>
                     </div> -->
 
-                    <section id="contact" class="contact-section">
-                        <div class="contact-container">
-                                <div class="contact-title">
-                                    <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                                    <h2>Contact</h2>
-                                    <p><a href="mailto:ucccsacm@gmail.com">ucccsacm@gmail.com</a></p>
-            
-                                </div>
-                                <p class="contact-description">
-                                    Directly contact us about your queries in regards to
-                                    sponsorships or general questions regarding our
-                                    events!
-                                </p>
-            
-                            <!-- Contact Form -->
-                            
-                        </div>
-                    </section>
+            <section id="contact" class="contact-section">
+                <div class="contact-container">
+                    <div class="contact-title">
+                        <span class="arrow"
+                            ><i class="fas fa-arrow-right"></i
+                        ></span>
+                        <h2>Contact</h2>
+                        <p>
+                            <a href="mailto:ucccsacm@gmail.com"
+                                >ucccsacm@gmail.com</a
+                            >
+                        </p>
+                    </div>
+                    <p class="contact-description">
+                        Directly contact us about your queries in regards to
+                        sponsorships or general questions regarding our events!
+                    </p>
 
                     <!-- Contact Form -->
+                </div>
+            </section>
 
+            <!-- Contact Form -->
 
-                    <!-- <form
+            <!-- <form
                         class="contact-form"
                         action="submit_form.php"
                         method="post"
