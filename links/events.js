@@ -48,22 +48,22 @@ function renderPastEvents() {
         const modalContentId = `${modalId}-content`;
 
         return `
-            <div>
-                <figure>
+            <div class="past-event-card">
+                <figure class="past-event-trigger" data-modal-open="${modalId}" role="button" tabindex="0" aria-label="Open ${event.year} event details">
                     <img src="${event.image}" alt="${event.alt}" />
                     <figcaption>
                         <h2>${event.label}</h2>
                         <p>${event.description}</p>
                         <button type="button" data-modal-open="${modalId}">View More</button>
-                        <div id="${modalId}" class="modal">
-                            <section id="${modalContentId}" class="modal-content">
-                                <h3>${event.year} Past Paper</h3>
-                                <p>The ${event.year} past papers are available to use and download here!</p>
-                                <a href="${event.paperHref}" target="_blank" rel="noopener noreferrer">Download Past Paper</a>
-                            </section>
-                        </div>
                     </figcaption>
                 </figure>
+                <div id="${modalId}" class="modal">
+                    <section id="${modalContentId}" class="modal-content">
+                        <h3>${event.year} Past Paper</h3>
+                        <p>The ${event.year} past papers are available to use and download here!</p>
+                        <a href="${event.paperHref}" target="_blank" rel="noopener noreferrer">Download Past Paper</a>
+                    </section>
+                </div>
             </div>
         `;
     }).join("");
@@ -83,6 +83,10 @@ function setupPastEventModalHandlers() {
     }
 
     container.addEventListener("click", (event) => {
+        if (event.target.closest(".modal-content")) {
+            return;
+        }
+
         const openButton = event.target.closest("[data-modal-open]");
         if (openButton) {
             const modalId = openButton.getAttribute("data-modal-open");
@@ -95,6 +99,22 @@ function setupPastEventModalHandlers() {
 
         if (event.target.classList.contains("modal")) {
             event.target.style.display = "none";
+        }
+    });
+
+    container.addEventListener("keydown", (event) => {
+        const trigger = event.target.closest("[data-modal-open]");
+        if (!trigger) {
+            return;
+        }
+
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            const modalId = trigger.getAttribute("data-modal-open");
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "flex";
+            }
         }
     });
 
