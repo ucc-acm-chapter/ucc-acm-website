@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -32,7 +32,9 @@
                         <li><a href="../index.html#events">Events</a></li>
                         <li><a href="../index.html#team">Our Team</a></li>
                         <li><a href="../index.html#contact">Contact</a></li>
-                        <li><a href="" class="past-events-link">Past Events</a></li>
+                        <li>
+                            <a href="" class="past-events-link">Past Events</a>
+                        </li>
                     </ul>
                     <div class="hamburger" id="hamburger">&#9776;</div>
                     <!-- Hamburger Menu -->
@@ -47,152 +49,34 @@
                     id="upcomingEventImage"
                     onclick="openFullscreen(this)"
                 />
-                <div class="fullscreen-icon" onclick="openFullscreen(document.getElementById('upcomingEventImage'))">
+                <div
+                    class="fullscreen-icon"
+                    onclick="
+                        openFullscreen(
+                            document.getElementById('upcomingEventImage'),
+                        )
+                    "
+                >
                     <i class="fas fa-expand"></i>
                 </div>
                 <figcaption>
                     <h2>Upcoming Event</h2>
                     <p>
-                        Join us for the <strong>2026 Hackathon</strong> at UCC's Western Gateway Building! Dive into a day of coding,
-                        problem-solving, and teamwork with fellow tech enthusiasts. Whether you're a beginner or a pro, 
-                        there's something for everyone.
+                        Join us for the <strong>2026 Hackathon</strong> at UCC's
+                        Western Gateway Building! Dive into a day of coding,
+                        problem-solving, and teamwork with fellow tech
+                        enthusiasts. Whether you're a beginner or a pro, there's
+                        something for everyone.
                     </p>
                     <p>
-                        Win awesome prizes, meet industry leaders, and make new connections. 
-                        Don’t miss out—registration is open now on our <a href="../index.html">home page</a>.
+                        Win awesome prizes, meet industry leaders, and make new
+                        connections. Don’t miss out—registration is open now on
+                        our <a href="../index.html">home page</a>.
                     </p>
                 </figcaption>
             </figure>
-            <section>
-                <div>
-                    <figure>
-                        <img
-                            src="../images/event4.JPG"
-                            alt="A picture of an ACM event!"
-                        />
-                        <figcaption>
-                            <h2>Last Year</h2>
-                            <p>
-                                The 2025 hackathon brought together talented participants for an incredible day 
-                                of innovation and collaboration. Teams showcased exceptional problem-solving skills 
-                                and creativity, tackling challenging problems with enthusiasm. The event fostered a 
-                                vibrant atmosphere of learning and teamwork, creating lasting memories and inspiring 
-                                connections among all participants.
-                            </p>
-                            <button id="2025">View More</button>
-                            <div id="modal2025" class="modal">
-                                <section
-                                    id="modal2025Content"
-                                    class="modal-content"
-                                >
-                                    <h3>2025 Past Paper</h3>
-                                    <p>
-                                        The 2025 past papers are available to
-                                        use and download here!
-                                    </p>
-                                    <a href="files/IrlCPC_Problems_2025.pdf" target="_blank">Download Past Paper</a>
-                                </section>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div>
-                    <figure>
-                        <img
-                            src="../images/event2.jpg"
-                            alt="A picture of an ACM event from 2024!"
-                        />
-                        <figcaption>
-                            <h2>2024</h2>
-                            <p>
-                                Last year's hackathon was a thrilling experience, with 62 teams coming together
-                                to solve challenges and push the boundaries of innovation. Teams enjoyed the 
-                                collaborative spirit, diving into problem-solving and creating unique solutions. 
-                                It was a day filled with learning, creativity, and unforgettable memories, making 
-                                it a truly great experience for everyone involved.
-                            </p>
-                            <button id="2024">View More</button>
-                            <div id="modal2024" class="modal">
-                                <section
-                                    id="modal2024Content"
-                                    class="modal-content"
-                                >
-                                    <h3>2024 Past Paper</h3>
-                                    <p>
-                                        The 2024 past papers are available to
-                                        use and download here!
-                                    </p>
-                                    <a href="files/IrlCPC_Problems_2024.pdf" target="_blank">Download Past Paper</a>
-                                </section>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div>
-                    <figure>
-                        <img
-                            src="../images/event.jpg"
-                            alt="A picture of an ACM event from 2019!"
-                        />
-                        <figcaption>
-                            <h2>2023</h2>
-                            <p>
-                                In 2023, we hosted another exciting hackathon that brought together 
-                                passionate minds to solve real-world problems. Teams worked tirelessly, blending 
-                                creativity and technical skills to develop innovative solutions. The event was a 
-                                celebration of collaboration and determination, leaving everyone inspired and eager 
-                                for more. It was a fantastic way to kick off the year!
-                            </p>
-                            <button id="2019">View More</button>
-                            <div id="modal2019" class="modal">
-                                <section
-                                    id="modal2019Content"
-                                    class="modal-content"
-                                >
-                                    <h3>2023 Past Paper</h3>
-                                    <p>
-                                        The 2023 past papers are available to
-                                        use and download here!
-                                    </p>
-                                    <a href="files/IrlCPC_Problems 2023.pdf" target="_blank">Download Past Paper</a>
-                                </section>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div>
-                    <figure>
-                        <img
-                            src="../images/event3.jpg"
-                            alt="A picture of an ACM event from 2021!"
-                        />
-                        <figcaption>
-                            <h2>2021</h2>
-                            <p>
-                                The 2021 hackathon was a remarkable event, showcasing the resilience and 
-                                creativity of participants despite the challenges of the year. Teams came 
-                                together tackling complex problems with enthusiasm and ingenuity. 
-                                The energy and dedication displayed by everyone made it a truly memorable 
-                                experience, highlighting the power of innovation and collaboration.
-                            </p>
-                            <button id="2021">View More</button>
-                            <div id="modal2021" class="modal">
-                                <section
-                                    id="modal2021Content"
-                                    class="modal-content"
-                                >
-                                    <h3>2021 Past Paper</h3>
-                                    <p>
-                                        The 2021 past papers are available to
-                                        use and download here!
-                                    </p>
-                                    <a href="files/IrlCPC_Problems_2021.pdf" target="_blank">Download Past Paper</a>
-                                </section>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-            </section>
+
+            <section id="past-events-list" aria-label="Past events"></section>
         </main>
         <footer class="footer">
             <div class="footer-container">
